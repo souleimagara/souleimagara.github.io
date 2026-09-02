@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360"
+     role="img" aria-label="Illustration for theatre-controller">
+  <defs>
+    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(258 88% 74%)"/>
+      <stop offset="1" stop-color="hsl(196 85% 62%)"/>
+    </linearGradient>
+    <radialGradient id="g" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="hsl(258 80% 55%)" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="hsl(258 80% 55%)" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="d" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.4" fill="hsl(196 60% 70%)" opacity="0.13"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="#0b0a17"/>
+  <rect width="640" height="360" fill="url(#d)"/>
+  <ellipse cx="332" cy="163" rx="282" ry="216" fill="url(#g)"/>
+  <rect x="492" y="94" width="24" height="24" rx="3" transform="rotate(77 504.0 106.0)" fill="hsl(196 80% 62%)" opacity="0.16"/><circle cx="71" cy="194" r="12" fill="none" stroke="hsl(258 80% 66%)" stroke-width="1.5" opacity="0.22"/><path d="M47 79 56 62 64 79Z" fill="hsl(196 80% 62%)" opacity="0.14"/>
+  <g transform="translate(217.5 77.5) scale(2.05)"
+     fill="none" stroke="url(#s)" stroke-width="2.4" stroke-linecap="round"
+     stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M17 37h66q9 0 9 9v13q0 9-9 9H17q-9 0-9-9V46q0-9 9-9Z"/><path d="M34 45a7 7 0 1 1 0 14 7 7 0 0 1 0-14Z"/><path d="M66 45a7 7 0 1 1 0 14 7 7 0 0 1 0-14Z"/></g>
+</svg>

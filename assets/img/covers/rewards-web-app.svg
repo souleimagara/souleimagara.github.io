@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360"
+     role="img" aria-label="Illustration for rewards-web-app">
+  <defs>
+    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(284 88% 74%)"/>
+      <stop offset="1" stop-color="hsl(250 85% 62%)"/>
+    </linearGradient>
+    <radialGradient id="g" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="hsl(284 80% 55%)" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="hsl(284 80% 55%)" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="d" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.4" fill="hsl(250 60% 70%)" opacity="0.13"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="#0b0a17"/>
+  <rect width="640" height="360" fill="url(#d)"/>
+  <ellipse cx="329" cy="199" rx="282" ry="216" fill="url(#g)"/>
+  <rect x="495" y="214" width="26" height="26" rx="3" transform="rotate(5 508.0 227.0)" fill="hsl(250 80% 62%)" opacity="0.16"/><circle cx="120" cy="252" r="12" fill="none" stroke="hsl(284 80% 66%)" stroke-width="1.5" opacity="0.22"/><path d="M101 214 108 199 116 214Z" fill="hsl(250 80% 62%)" opacity="0.14"/>
+  <g transform="translate(217.5 77.5) scale(2.05)"
+     fill="none" stroke="url(#s)" stroke-width="2.4" stroke-linecap="round"
+     stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M13 22h74v56H13Z"/><path d="M13 36h74"/><path d="M50 47a10 10 0 1 1 0 21 10 10 0 0 1 0-21Z"/><path d="M46 55h8"/></g>
+</svg>
