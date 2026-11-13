@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360"
-     role="img" aria-label="Illustration for cashouts">
+     role="img" aria-label="Illustration for Bank cashouts and identity">
   <defs>
     <linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="hsl(250 88% 74%)"/>
       <stop offset="1" stop-color="hsl(190 85% 62%)"/>
     </linearGradient>
-    <radialGradient id="g" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="hsl(250 80% 55%)" stop-opacity="0.42"/>
+    <radialGradient id="g" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="hsl(250 80% 55%)" stop-opacity="0.40"/>
       <stop offset="1" stop-color="hsl(250 80% 55%)" stop-opacity="0"/>
     </radialGradient>
     <pattern id="d" width="26" height="26" patternUnits="userSpaceOnUse">
@@ -15,9 +15,40 @@
   </defs>
   <rect width="640" height="360" fill="#0b0a17"/>
   <rect width="640" height="360" fill="url(#d)"/>
-  <ellipse cx="299" cy="173" rx="282" ry="216" fill="url(#g)"/>
-  <rect x="470" y="271" width="17" height="17" rx="3" transform="rotate(48 478.5 279.5)" fill="hsl(190 80% 62%)" opacity="0.16"/><circle cx="104" cy="264" r="12" fill="none" stroke="hsl(250 80% 66%)" stroke-width="1.5" opacity="0.22"/><path d="M79 285 85 273 91 285Z" fill="hsl(190 80% 62%)" opacity="0.14"/>
-  <g transform="translate(217.5 77.5) scale(2.05)"
-     fill="none" stroke="url(#s)" stroke-width="2.4" stroke-linecap="round"
-     stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M9 29h82v42H9Z"/><path d="M50 39a11 11 0 1 1 0 22 11 11 0 0 1 0-22Z"/><path d="M20 38h7M73 62h7"/></g>
+  <ellipse cx="320" cy="170" rx="300" ry="220" fill="url(#g)"/>
+
+  <!-- phone -->
+  <rect x="235" y="34" width="170" height="292" rx="24" fill="hsl(250 40% 12%)"
+        stroke="url(#s)" stroke-width="2"/>
+  <rect x="295" y="46" width="50" height="7" rx="3.5" fill="hsl(250 40% 22%)"/>
+
+  <!-- header -->
+  <text x="258" y="82" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#eceaf6">Cash out</text>
+  <circle cx="266" cy="104" r="12" fill="none" stroke="hsl(45 95% 62%)" stroke-width="2"/>
+  <path d="M262 97 v14 M260 100 h6 a2.3 2.3 0 0 1 0 5 h-6 M260 105 h7 a2.3 2.3 0 0 1 0 5 h-7"
+        stroke="hsl(45 95% 62%)" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+  <text x="286" y="109" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#eceaf6">$5.52</text>
+  <line x1="256" y1="124" x2="384" y2="124" stroke="hsl(250 40% 26%)" stroke-width="1"/>
+
+  <!-- provider rows -->
+  <!-- Plaid -->
+  <rect x="254" y="134" width="132" height="42" rx="10" fill="none" stroke="hsl(250 40% 28%)" stroke-width="1.3"/>
+  <circle cx="272" cy="155" r="7" fill="hsl(220 85% 62%)"/>
+  <text x="288" y="152" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" fill="#eceaf6">Plaid</text>
+  <text x="288" y="166" font-family="Arial, sans-serif" font-size="9.5" fill="hsl(250 25% 70%)">Bank payout · US</text>
+  <!-- Tink -->
+  <rect x="254" y="182" width="132" height="42" rx="10" fill="none" stroke="hsl(250 40% 28%)" stroke-width="1.3"/>
+  <circle cx="272" cy="203" r="7" fill="hsl(165 70% 52%)"/>
+  <text x="288" y="200" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" fill="#eceaf6">Tink</text>
+  <text x="288" y="214" font-family="Arial, sans-serif" font-size="9.5" fill="hsl(250 25% 70%)">Bank payout · Europe</text>
+  <!-- Onfido -->
+  <rect x="254" y="230" width="132" height="42" rx="10" fill="none" stroke="hsl(250 40% 28%)" stroke-width="1.3"/>
+  <circle cx="272" cy="251" r="7" fill="hsl(255 85% 68%)"/>
+  <text x="288" y="248" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" fill="#eceaf6">Onfido</text>
+  <text x="288" y="262" font-family="Arial, sans-serif" font-size="9.5" fill="hsl(250 25% 70%)">Identity check</text>
+
+  <!-- confirm button -->
+  <rect x="254" y="282" width="132" height="28" rx="9" fill="url(#s)"/>
+  <text x="320" y="301" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+        font-weight="700" fill="#0b0a17">Withdraw</text>
 </svg>

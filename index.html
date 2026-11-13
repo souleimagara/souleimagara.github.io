@@ -3,10 +3,10 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Souleima Gara · Unity, SDK &amp; Native Mobile Engineer</title>
-<meta name=description content="Six years building games, AR, VR and cross-platform apps, the native iOS and Android code beneath them, and SDKs other studios integrate into their own games.">
-<meta property=og:title content="Souleima Gara · Unity, SDK &amp; Native Mobile Engineer">
-<meta property=og:description content="26 shipped projects: rewards SDKs, hardware attestation, native plugins, VR and AR training.">
+<title>Souleima Gara · Unity Developer for Cross-Platform Games &amp; XR</title>
+<meta name=description content="Unity developer building cross-platform games, VR, AR and mixed reality experiences, plus SDKs and native integrations for game studios.">
+<meta property=og:title content="Souleima Gara · Unity Developer for Cross-Platform Games &amp; XR">
+<meta property=og:description content="Explore Souleima Gara’s Unity work across gameplay, XR training and SDK integrations.">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 :root{
@@ -112,7 +112,8 @@ main,.top,.foot{position:relative;z-index:1}
 .stat span{font-size:12.5px;color:var(--ink-3)}
 
 /* sections */
-section.band{padding:92px 0;scroll-margin-top:90px}
+section.band{padding:52px 0;scroll-margin-top:84px}
+#featured .grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
 .shead{display:flex;align-items:center;gap:14px}
 .ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none;
   background:var(--a-dim);border:1px solid var(--line-2)}
@@ -155,6 +156,7 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   margin-top:36px}
 .stack__card{padding:24px;border-radius:var(--r);border:1px solid var(--line);
   background:var(--surface)}
+.stack__card--primary{border-color:var(--a);background:linear-gradient(135deg,var(--a-dim),var(--surface))}
 .stack__card h3{font-size:.98rem;display:flex;align-items:center;gap:12px}
 .stack__card .ico{width:34px;height:34px;border-radius:10px}
 .stack__card .ico svg{width:16px;height:16px}
@@ -177,6 +179,39 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden}
 .card__art img{width:100%;height:100%;object-fit:contain;padding:8px;cursor:zoom-in}
 .card__art img.card__cover{object-fit:cover;padding:0;cursor:default}
+.card__art img.fill{object-fit:cover;padding:0}
+.card__art--pair{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr)}
+.card__art--pair img{min-width:0;min-height:0}
+.card__art img.contain{object-fit:contain;padding:0}
+.card__art--ink{background:#0b0614}
+.card__art--portrait{background:radial-gradient(ellipse at center,#304d60,#12111f);}
+.card__art--portrait img.contain{position:absolute;inset:0;width:100%;height:100%;padding:12px;object-fit:contain;}
+.card__toggle{margin-top:12px;align-self:flex-start;background:none;border:0;color:#a78bfa;
+  font:inherit;font-size:13px;font-weight:650;cursor:pointer;padding:2px 0;letter-spacing:.01em}
+.card__toggle:hover{color:#c4b5fd;text-decoration:underline}
+.card__more{display:none}
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
+.modal.open{display:flex}
+.modal__backdrop{position:absolute;inset:0;background:rgba(5,4,12,.82);backdrop-filter:blur(6px)}
+.modal__box{position:relative;max-width:600px;width:100%;max-height:88vh;overflow:auto;
+  background:var(--surface);border:1px solid var(--line-2);border-radius:20px;
+  box-shadow:0 44px 100px -40px rgba(0,0,0,.92)}
+.modal__media{position:relative;aspect-ratio:16/9;background:#0b0614;overflow:hidden;
+  border-radius:20px 20px 0 0;border-bottom:1px solid var(--line)}
+.modal__media img{width:100%;height:100%;object-fit:cover;display:block}
+.modal__media--portrait{aspect-ratio:auto;height:clamp(300px,55vh,520px);background:radial-gradient(ellipse at center,#304d60,#12111f);}
+.modal__media--portrait img{padding:16px;}
+.modal__in{padding:22px 30px 30px}
+.modal__box h3{font-size:1.28rem;margin:0 0 4px}
+.modal__meta{color:var(--ink-3);font-size:12.5px;margin:0 0 15px}
+.modal__body{margin:0;color:var(--ink-2);font-size:14.5px;line-height:1.72}
+.modal__body p{margin:0}
+.modal__in .pills{margin-top:18px}
+.modal__in .card__links{margin-top:15px}
+.modal__close{position:absolute;top:12px;right:13px;z-index:3;width:32px;height:32px;border-radius:50%;
+  background:rgba(7,6,15,.7);border:1px solid var(--line-2);color:#fff;font-size:17px;line-height:1;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
+.modal__close:hover{background:rgba(7,6,15,.95)}
 .card__art--empty{background:
   radial-gradient(70% 100% at 30% 0%,rgba(139,92,246,.20),transparent 70%),var(--bg-2)}
 .grid__note{margin-top:22px;font-size:12.5px;color:var(--ink-3);max-width:60ch}
@@ -255,17 +290,15 @@ section.band{padding:92px 0;scroll-margin-top:90px}
 <section class=hero>
   <div class="wrap hero__grid">
     <div>
-      <p class=eye>Unity · SDK &amp; Native Mobile Engineer</p>
-      <h1>Building games, apps and the <em>tools developers</em> rely on.</h1>
-      <p class=hero__lede>Six years in Unity, across mobile, desktop, web and VR. I build games and
-        cross-platform apps, the native iOS and Android code underneath them, and the SDKs other
-        studios drop into their own games. My work has shipped for museums, hospitals,
-        manufacturers, public institutions and game studios.</p>
+      <p class=eye>Souleima Gara</p>
+      <h1>Unity developer for <em>cross-platform games &amp; XR</em></h1>
+      <p class=hero__lede>I build games and VR, AR and mixed reality experiences across mobile, desktop, web and headsets.
+        At ZBD, I also build SDKs and native integrations that studios use in their games.</p>
       <div class=hero__cards>
         <div class=minicard><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M3 6h18v12H3Zm0 0 9 7 9-7"/></svg></span><div><b>Availability</b><span>Open to offers</span></div></div>
       </div>
       <div class=cta>
-        <a class="btn btn--fill" href="#work">See my work →</a>
+        <a class="btn btn--fill" href="#featured">See my work →</a>
         <a class=btn href="assets/Souleima-Gara-CV.pdf" target=_blank rel=noopener>Download CV</a>
         <a class=btn href="https://www.linkedin.com/in/souleima-gara-bb688212b/" target=_blank rel=noopener>LinkedIn</a>
       </div>
@@ -277,10 +310,61 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=wrap>
     <ul class=stats>
       <li class=stat><b>6+</b><span>Years with Unity</span></li>
-      <li class=stat><b>26</b><span>Projects shipped</span></li>
+      <li class=stat><b>31</b><span>Projects in this portfolio</span></li>
       <li class=stat><b>6</b><span>Platforms shipped to</span></li>
       <li class=stat><b>11</b><span>Clients &amp; institutions</span></li>
     </ul>
+  </div>
+</section>
+
+<section class=band id=featured aria-labelledby=featured-title>
+  <div class=wrap>
+    <header class=shead><div><p class=shead__eye>Selected work</p><h2 id=featured-title>Featured projects</h2></div></header>
+    <div class=grid>
+<article class=card data-facets="sdk">
+  <div data-slug="zbd-earn-sdk" class="card__art"><img src="assets/img/zbd-earn-sdk.webp" alt="ZBD Earn SDK" loading=lazy decoding=async>
+    <span class=card__org>ZBD</span>
+  </div>
+  <div class=card__body>
+    <h3>ZBD Earn SDK</h3>
+    <p class=card__meta>2022 – present</p>
+    <p class=card__text>Built with the ZBD team, this Unity SDK lets game studios integrate Bitcoin rewards and cashouts.</p>
+    <div class="card__more"><p>The ZBD Earn SDK lets game studios add Bitcoin rewards and cashouts to their games. Working with the ZBD team, I contributed to the Unity SDK and its native integrations across iOS, Android, Windows and macOS. Game studios use the Unity SDK in their games. My work also includes building integrations for Unreal and Godot.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Unity</li><li class="pill">Unreal</li><li class="pill">Rust</li><li class="pill">C#</li><li class="pill">Kotlin</li><li class="pill">Swift</li><li class="pill">C++</li></ul>
+    <div class=card__links><a href="https://docs.zbdpay.com/earn/sdk" target=_blank rel=noopener>Documentation I wrote &#8599;</a></div>
+  </div>
+</article>
+<article class=card data-facets="games">
+  <div data-slug="kart" class="card__art"><img src="assets/img/kart-1.png" alt="ZEBEDEE Kart" loading=lazy decoding=async>
+    <span class=card__org>ZBD</span>
+  </div>
+  <div class=card__body>
+    <h3>ZEBEDEE Kart</h3>
+    <p class=card__meta>2022 – 2023</p>
+    <p class=card__text>A Unity kart racer for Windows with Bitcoin Lightning rewards. I developed AI opponents, new tracks and online multiplayer using Photon.</p>
+    <div class="card__more"><p>I joined ZEBEDEE Kart during its early prototype stage and developed AI opponents for solo races, built new tracks and implemented online multiplayer using Photon. Built in Unity for Windows, the game rewards players through Bitcoin Lightning. ZBD showcased it at a Bitcoin conference.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Photon</li></ul>
+
+  </div>
+</article>
+<article class=card data-facets="xr games">
+  <div data-slug="dialysis" class="card__art"><img src="assets/img/dialysis-1.jpg" alt="Dialysis training simulator" loading=lazy decoding=async>
+    <span class=card__org>Underlit Studio</span>
+  </div>
+  <div class=card__body>
+    <h3>Dialysis training simulator</h3>
+    <p class=card__meta>2023 – 2024 · Hospital training programme</p>
+    <p class=card__text>I built this mobile and VR simulator end to end. Charles Nicolle Hospital uses it to train and assess medical students on dialysis procedures.</p>
+    <div class="card__more"><p>I developed the simulator in Unity for Android and iOS, then extended it to Meta Quest VR. An instructor dashboard supports reviewing student results, searching assessment records and exporting results. Charles Nicolle Hospital uses the simulator to train and assess medical students on dialysis procedures.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Firebase</li><li class="pill">Meta Quest</li></ul>
+
+  </div>
+</article>
+    </div>
+    <div class=cta><a class=btn href="#work">Browse all projects →</a></div>
   </div>
 </section>
 
@@ -289,8 +373,7 @@ section.band{padding:92px 0;scroll-margin-top:90px}
     <header class=shead><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M12 2.6 4 6.4v5.3c0 5 3.4 9.6 8 10.7 4.6-1.1 8-5.7 8-10.7V6.4Z"/></svg></span><div><p class=shead__eye>Who I am</p><h2>How I work</h2></div></header><p class=shead__sub>A few things about the way I approach the work.</p>
     <div class=trio>
       <div class=tile><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 7h16v13H4Zm5 0V4h6v3"/></svg></span><h3>Learning the platform, not waiting on it</h3>
-        <p>When Unity cannot reach something, I go and learn the platform rather than wait for
-           someone else to. That is how C# turned into Kotlin, Swift and C++ along the way.</p></div>
+        <p>When Unity cannot do something directly, I learn the platform and find a way to make it work. That is how my work expanded from C# into Kotlin, Swift and C++.</p></div>
       <div class=tile><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 8.5 12 4.5l8 4-8 4Zm0 4.5 8 4 8-4M4 17l8 4 8-4"/></svg></span><h3>Documentation is part of the job</h3>
         <p>I wrote the documentation, the tutorials and the walkthrough videos for the SDK I work
            on. The aim is a studio getting it running without needing to message me.</p></div>
@@ -304,97 +387,146 @@ section.band{padding:92px 0;scroll-margin-top:90px}
 <section class=band id=experience>
   <div class=wrap>
     <header class=shead><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 7h16v13H4Zm5 0V4h6v3"/></svg></span><div><p class=shead__eye>Career</p><h2>Where I have worked</h2></div></header>
-    <ul class=tl><li class=tl__item><div class=tl__dot></div><div class=tl__card><p class=tl__role>Unity developer</p><h3>ZEBEDEE (ZBD)</h3><p class=tl__when>Sep 2022 – present &nbsp;·&nbsp; Remote, for a Hoboken, US company</p><p class=tl__text>A rewards platform studios plug into their games so players can earn and cash out real money. I work across the Unity SDK, the native iOS and Android plugins beneath it, the web app that runs inside it, and the dashboard and service endpoints studios use to run it all. It is used by studios whose games reach over a million monthly players.</p><ul class=pills><li class="pill">ZBD Earn SDK</li><li class="pill">Device &amp; app attestation</li><li class="pill">Desktop WebView plugin for Unity</li><li class="pill">Bank cashouts &amp; identity</li><li class="pill">Rewards web app</li><li class="pill">Developer dashboard &amp; service endpoints</li></ul></div></li><li class=tl__item><div class=tl__dot></div><div class=tl__card><p class=tl__role>Unity developer, freelance</p><h3>Underlit Studio</h3><p class=tl__when>August 2023 – present &nbsp;·&nbsp; Tunisia</p><p class=tl__text>VR, AR and mobile work: training simulators and installations for hospitals, public institutions and cultural venues.</p><ul class=pills><li class="pill">Dialysis training simulator</li><li class="pill">ISIE VR voting simulator</li><li class="pill">Theatre installation controller</li><li class="pill">Virtual Fair</li></ul></div></li><li class=tl__item><div class=tl__dot></div><div class=tl__card><p class=tl__role>Unity &amp; Unreal Engine developer</p><h3>3D WAVE</h3><p class=tl__when>Oct 2019 – Aug 2022 &nbsp;·&nbsp; Sousse, Tunisia</p><p class=tl__text>Client work across AR, VR and mobile for museums, manufacturers, heritage sites and city authorities in Tunisia, Qatar and Germany.</p><ul class=pills><li class="pill">Katara Treasure Hunt</li><li class="pill">Museum for All</li><li class="pill">Dürr Technik AR</li><li class="pill">Tunisia VR</li><li class="pill">Magic Eye</li><li class="pill">Magic Earth</li></ul></div></li></ul>
+    <ul class=tl><li class=tl__item><div class=tl__dot></div><div class=tl__card><p class=tl__role>Unity developer</p><h3>ZEBEDEE (ZBD)</h3><p class=tl__when>Sep 2022 – present &nbsp;·&nbsp; Remote, for a Hoboken, US company</p><p class=tl__text>I develop games and cross-platform applications with the ZBD team, including SDKs, payment applications and developer tools. My work spans building projects from scratch and extending existing products.</p><ul class=pills><li class="pill">ZBD Earn SDK</li><li class="pill">Device &amp; app attestation</li><li class="pill">Desktop WebView plugin for Unity</li><li class="pill">Bank cashouts &amp; identity</li><li class="pill">Rewards web app</li><li class="pill">Payouts widget (CS2)</li><li class="pill">Windows attestation</li><li class="pill">Cross-engine SDK</li><li class="pill">Developer dashboard &amp; service endpoints</li></ul></div></li><li class=tl__item><div class=tl__dot></div><div class=tl__card><p class=tl__role>Unity developer, freelance</p><h3>Underlit Studio</h3><p class=tl__when>May 2021 – present &nbsp;·&nbsp; Tunisia</p><p class=tl__text>VR, AR and mobile work: training simulators and installations for hospitals, public institutions and cultural venues.</p><ul class=pills><li class="pill">Dialysis training simulator</li><li class="pill">ISIE VR voting simulator</li><li class="pill">Theatre installation controller</li><li class="pill">Virtual Fair</li><li class="pill">Sartex AR clothing showcase</li></ul></div></li><li class=tl__item><div class=tl__dot></div><div class=tl__card><p class=tl__role>Unity &amp; Unreal Engine developer</p><h3>3D WAVE</h3><p class=tl__when>Oct 2019 – Aug 2022 &nbsp;·&nbsp; Sousse, Tunisia</p><p class=tl__text>Client work across AR, VR and mobile for museums, manufacturers, heritage sites and city authorities in Tunisia, Qatar and Germany.</p><ul class=pills><li class="pill">Katara Treasure Hunt</li><li class="pill">Museum for All</li><li class="pill">Dürr Technik AR</li><li class="pill">Tunisia VR</li><li class="pill">Magic Eye</li><li class="pill">Magic Earth</li></ul></div></li></ul>
   </div>
 </section>
 
 <section class=band id=stack>
   <div class=wrap>
-    <header class=shead><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 8.5 12 4.5l8 4-8 4Zm0 4.5 8 4 8-4M4 17l8 4 8-4"/></svg></span><div><p class=shead__eye>Technologies</p><h2>My technical stack</h2></div></header><p class=shead__sub>Things I have shipped with, not things I have read about.</p>
-    <div class=stack__grid><div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 8.5 12 4.5l8 4-8 4Zm0 4.5 8 4 8-4M4 17l8 4 8-4"/></svg></span>Languages</h3><ul class=pills><li class="pill">C#</li><li class="pill">C++</li><li class="pill">Kotlin</li><li class="pill">Swift</li><li class="pill">TypeScript</li><li class="pill">Java</li><li class="pill">SQL</li></ul></div><div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 7h16v13H4Zm5 0V4h6v3"/></svg></span>Unity &amp; XR</h3><ul class=pills><li class="pill">Unity 2D/3D</li><li class="pill">XR</li><li class="pill">Native plugins</li><li class="pill">Unreal Engine 4</li><li class="pill">Meta Quest</li><li class="pill">ARCore</li><li class="pill">ARKit</li><li class="pill">Vuforia</li></ul></div><div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M12 2.6 4 6.4v5.3c0 5 3.4 9.6 8 10.7 4.6-1.1 8-5.7 8-10.7V6.4Z"/></svg></span>Native mobile</h3><ul class=pills><li class="pill">Android &amp; iOS plugins</li><li class="pill">Chromium Embedded Framework</li><li class="pill">WebView bridges</li><li class="pill">Deep linking</li></ul></div><div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 4h7v7H4Zm9 0h7v7h-7ZM4 13h7v7H4Zm9 0h7v7h-7Z"/></svg></span>Device security</h3><ul class=pills><li class="pill">Apple App Attest</li><li class="pill">Android Key Attestation</li><li class="pill">Hardware-backed keys (Secure Enclave, StrongBox)</li><li class="pill">Device fingerprinting</li></ul></div><div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M3 6h18v12H3Zm0 0 9 7 9-7"/></svg></span>Payments &amp; identity</h3><ul class=pills><li class="pill">Plaid</li><li class="pill">Tink</li><li class="pill">Onfido (KYC)</li><li class="pill">Bitcoin Lightning</li><li class="pill">Unity IAP</li></ul></div><div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 8.5 12 4.5l8 4-8 4Zm0 4.5 8 4 8-4M4 17l8 4 8-4"/></svg></span>Multiplayer &amp; networking</h3><ul class=pills><li class="pill">Photon</li><li class="pill">Mirror</li></ul></div><div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 8.5 12 4.5l8 4-8 4Zm0 4.5 8 4 8-4M4 17l8 4 8-4"/></svg></span>Backends</h3><ul class=pills><li class="pill">Firebase</li><li class="pill">PlayFab</li><li class="pill">Beamable</li></ul></div><div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 7h16v13H4Zm5 0V4h6v3"/></svg></span>Web</h3><ul class=pills><li class="pill">REST APIs</li><li class="pill">Next.js</li><li class="pill">React</li></ul></div></div>
+    <header class=shead><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 8.5 12 4.5l8 4-8 4Zm0 4.5 8 4 8-4M4 17l8 4 8-4"/></svg></span><div><p class=shead__eye>Technologies</p><h2>My technical stack</h2></div></header><p class=shead__sub>Technologies I use across games, XR and application development.</p>
+    <div class=stack__grid>
+      <div class="stack__card stack__card--primary"><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 7h16v13H4Zm5 0V4h6v3"/></svg></span>Game development &amp; XR</h3><ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Unreal Engine</li><li class="pill">Godot</li><li class="pill">Meta Quest</li><li class="pill">ARKit</li><li class="pill">ARCore</li><li class="pill">Vuforia</li><li class="pill">Photon</li><li class="pill">Mirror</li></ul></div>
+      <div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M12 2.6 4 6.4v5.3c0 5 3.4 9.6 8 10.7 4.6-1.1 8-5.7 8-10.7V6.4Z"/></svg></span>SDK &amp; native development</h3><ul class=pills><li class="pill">C++</li><li class="pill">Rust</li><li class="pill">Swift</li><li class="pill">Kotlin/Java</li><li class="pill">Native plugins</li><li class="pill">Chromium Embedded Framework</li></ul></div>
+      <div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 8.5 12 4.5l8 4-8 4Zm0 4.5 8 4 8-4M4 17l8 4 8-4"/></svg></span>Web development</h3><ul class=pills><li class="pill">TypeScript</li><li class="pill">JavaScript</li><li class="pill">React</li><li class="pill">Next.js</li></ul></div>
+      <div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 5h16v6H4Zm0 8h16v6H4ZM7 8h.01M7 16h.01"/></svg></span>Backend &amp; infrastructure</h3><ul class=pills><li class="pill">Firebase</li><li class="pill">PlayFab</li><li class="pill">Node.js</li><li class="pill">.NET</li><li class="pill">REST APIs</li><li class="pill">PostgreSQL</li><li class="pill">Docker</li><li class="pill">AWS</li></ul></div>
+      <div class=stack__card><h3><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 4h7v7H4Zm9 0h7v7h-7ZM4 13h7v7H4Zm9 0h7v7h-7Z"/></svg></span>Security &amp; payments</h3><ul class=pills><li class="pill">Apple App Attest</li><li class="pill">Android Key Attestation</li><li class="pill">TPM 2.0</li><li class="pill">Windows Hello</li><li class="pill">Bitcoin Lightning</li><li class="pill">Plaid</li><li class="pill">Tink</li><li class="pill">Onfido</li></ul></div>
+    </div>
   </div>
 </section>
 
 <section class=band id=work>
   <div class=wrap>
     <header class=shead><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M4 4h7v7H4Zm9 0h7v7h-7ZM4 13h7v7H4Zm9 0h7v7h-7Z"/></svg></span><div><p class=shead__eye>Portfolio</p><h2>What I have built</h2></div></header>
+    <p class=shead__sub>A selection of projects I’ve worked on.</p>
     <div class=filters role=group aria-label="Filter projects"><button data-facet="all" aria-pressed="true">All work</button><button data-facet="sdk" aria-pressed="false">SDK &amp; native</button><button data-facet="games" aria-pressed="false">Games</button><button data-facet="xr" aria-pressed="false">XR</button><button data-facet="ar" aria-pressed="false">AR</button><button data-facet="web" aria-pressed="false">Web</button></div>
     <div class=grid><article class=card data-facets="sdk">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/earn-sdk.svg" alt="Illustration for ZBD Earn SDK" loading=lazy decoding=async>
+  <div data-slug="zbd-earn-sdk" class="card__art"><img src="assets/img/zbd-earn-sdk.webp" alt="ZBD Earn SDK" loading=lazy decoding=async>
     <span class=card__org>ZBD</span>
   </div>
   <div class=card__body>
     <h3>ZBD Earn SDK</h3>
     <p class=card__meta>2022 – present</p>
-    <p class=card__text>The rewards SDK game studios integrate so their players can earn and cash out real money. A Unity package with native iOS and Android plugins beneath it, hardware-backed device attestation, signed reward and progress reporting, an embedded web app for cashout, and payout rails covering bank transfer and Bitcoin Lightning.</p>
-    <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Kotlin</li><li class="pill">Swift</li><li class="pill">C++</li></ul>
+    <p class=card__text>Built with the ZBD team, this Unity SDK lets game studios integrate Bitcoin rewards and cashouts.</p>
+    <div class="card__more"><p>The ZBD Earn SDK lets game studios add Bitcoin rewards and cashouts to their games. Working with the ZBD team, I contributed to the Unity SDK and its native integrations across iOS, Android, Windows and macOS. Game studios use the Unity SDK in their games. My work also includes building integrations for Unreal and Godot.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Unity</li><li class="pill">Unreal</li><li class="pill">Rust</li><li class="pill">C#</li><li class="pill">Kotlin</li><li class="pill">Swift</li><li class="pill">C++</li></ul>
     <div class=card__links><a href="https://docs.zbdpay.com/earn/sdk" target=_blank rel=noopener>Documentation I wrote &#8599;</a></div>
   </div>
-</article><article class=card data-facets="sdk">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/attestation.svg" alt="Illustration for Device &amp; app attestation" loading=lazy decoding=async>
-    <span class=card__org>ZBD</span>
-  </div>
-  <div class=card__body>
-    <h3>Device &amp; app attestation</h3>
-    <p class=card__meta>2023 – present</p>
-    <p class=card__text>Proving a device is genuine before it can earn. Keys are generated inside the hardware itself, in the Secure Enclave on iOS and a StrongBox-backed keystore on Android, so a modified client, an emulator or a rooted phone cannot claim rewards. Every reward and progress call is signed with a key that never leaves the chip.</p>
-    <ul class=pills><li class="pill">Swift</li><li class="pill">Kotlin</li><li class="pill">C#</li></ul>
-    <div class=card__links><a href="https://www.youtube.com/watch?v=3gDlIancMzE" target=_blank rel=noopener>Walkthrough: iOS DeviceCheck &#8599;</a><a href="https://www.youtube.com/watch?v=srA5zJMbebw" target=_blank rel=noopener>Walkthrough: Play Integrity &#8599;</a></div>
-  </div>
-</article><article class=card data-facets="sdk web">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/webview-plugin.svg" alt="Illustration for Desktop WebView plugin for Unity" loading=lazy decoding=async>
-    <span class=card__org>ZBD</span>
-  </div>
-  <div class=card__body>
-    <h3>Desktop WebView plugin for Unity</h3>
-    <p class=card__meta>2024</p>
-    <p class=card__text>Unity has no webview on desktop, so the rewards web app could not be shown there at all. I wrote one in C++ on Chromium Embedded Framework, with two-way messaging between the page and C#. Later adapted for VR.</p>
-    <ul class=pills><li class="pill">C++</li><li class="pill">CEF</li><li class="pill">Unity</li><li class="pill">C#</li></ul>
-    
-  </div>
-</article><article class=card data-facets="sdk web">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/cashouts.svg" alt="Illustration for Bank cashouts &amp; identity" loading=lazy decoding=async>
-    <span class=card__org>ZBD</span>
-  </div>
-  <div class=card__body>
-    <h3>Bank cashouts &amp; identity</h3>
-    <p class=card__meta>2024 – 2025</p>
-    <p class=card__text>Getting what a player earned into their real bank account. Plaid bank linking and ACH payouts for the United States, Tink for Europe, and Onfido for identity checks, all running inside Unity WebViews.</p>
-    <ul class=pills><li class="pill">Swift</li><li class="pill">Kotlin</li><li class="pill">C#</li><li class="pill">TypeScript</li></ul>
-    
-  </div>
 </article><article class=card data-facets="web">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/rewards-web-app.svg" alt="Illustration for Rewards web app" loading=lazy decoding=async>
+  <div data-slug="rewards-web-app" class="card__art card__art--portrait"><img class=contain src="assets/img/rewards-web-app.jpeg" alt="Rewards web app showing a Bitcoin balance, transactions and withdrawal options" loading=lazy decoding=async>
     <span class=card__org>ZBD</span>
   </div>
   <div class=card__body>
     <h3>Rewards web app</h3>
     <p class=card__meta>2023 – present</p>
-    <p class=card__text>The web app that renders inside the Unity game through the SDK, and the part a player actually touches. Withdrawal and cashout flows, balances shown in the player&#x27;s own currency, and the messaging bridge that keeps it in step with the game around it.</p>
+    <p class=card__text>An in-game web app where players check their balance, manage their account and cash out rewards.</p>
+    <div class="card__more"><p>I develop the player-facing interface and integrate the payment and identity services behind it. The app runs inside the game through the SDK, with two-way communication between the web interface and the game.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">TypeScript</li><li class="pill">React</li></ul>
-    
+
+  </div>
+</article><article class=card data-facets="sdk web">
+  <div data-slug="zbd-webview" class="card__art card__art--portrait"><img class=contain src="assets/img/zbd-widget.png" alt="ZBD rewards widget running in Unity" loading=lazy decoding=async>
+    <span class=card__org>ZBD</span>
+  </div>
+  <div class=card__body>
+    <h3>Desktop WebView plugin for Unity</h3>
+    <p class=card__meta>2024</p>
+    <p class=card__text>Built a desktop WebView plugin so studios can test the ZBD SDK’s web app directly in the Unity Editor on macOS and Windows, without creating a game build.</p>
+    <div class="card__more"><p>I built the plugin in C++ using Chromium Embedded Framework, with a two-way bridge to C#. It lets developers interact with the embedded web app and test its communication with their game inside the Unity Editor, making SDK integration easier to test and debug.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">C++</li><li class="pill">CEF</li><li class="pill">Unity</li><li class="pill">C#</li></ul>
+
+  </div>
+</article><article class=card data-facets="sdk">
+  <div data-slug="attestation" class="card__art card__art--ink"><img class=contain src="assets/img/attestation-real.webp" alt="Device attestation across iOS, Android and Windows" loading=lazy decoding=async>
+    <span class=card__org>ZBD</span>
+  </div>
+  <div class=card__body>
+    <h3>Device &amp; app attestation</h3>
+    <p class=card__meta>2023 – present</p>
+    <p class=card__text>Proving a device is genuine before it can earn, which helps prevent reward abuse. I helped build the iOS and Android checks and built the Windows integration end to end.</p>
+    <div class="card__more"><p>This is a way of checking that a device is real and has not been tampered with before it is allowed to earn, which helps prevent reward abuse. People who try to farm rewards at scale use fake phones, modified devices and fake locations, and these checks help detect those attempts. I helped build the iOS and Android checks and built the Windows integration end to end, using the PC's built-in security chip and Windows Hello to prove the machine and the person are genuine. Together they make one trust system that covers both phones and PCs.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Swift</li><li class="pill">Kotlin</li><li class="pill">C#</li><li class="pill">TPM 2.0</li><li class="pill">Windows</li></ul>
+    <div class=card__links><a href="https://www.youtube.com/watch?v=3gDlIancMzE" target=_blank rel=noopener>Walkthrough: iOS DeviceCheck &#8599;</a><a href="https://www.youtube.com/watch?v=srA5zJMbebw" target=_blank rel=noopener>Walkthrough: Play Integrity &#8599;</a></div>
+  </div>
+</article><article class=card data-facets="sdk web">
+  <div data-slug="cashouts" class="card__art card__art--ink"><img class=contain src="assets/img/cashouts-real.webp" alt="Bank cashout with identity and payout providers" loading=lazy decoding=async>
+    <span class=card__org>ZBD</span>
+  </div>
+  <div class=card__body>
+    <h3>Bank cashouts &amp; identity</h3>
+    <p class=card__meta>2025 – present</p>
+    <p class=card__text>Helped add fiat bank cashouts to ZBD, giving players a way to withdraw rewards to a bank account.</p>
+    <div class="card__more"><p>I integrated Plaid for US bank accounts, Tink for European bank accounts, and Onfido for identity checks. I also worked on email verification and connected the cashout flow across the backend, the embedded web app, and Unity.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Swift</li><li class="pill">Kotlin</li><li class="pill">C#</li><li class="pill">TypeScript</li></ul>
+
   </div>
 </article><article class=card data-facets="web">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/dev-dashboard.svg" alt="Illustration for Developer dashboard &amp; service endpoints" loading=lazy decoding=async>
+  <div data-slug="zbd-dashboard" class="card__art card__art--pair">
+    <img src="assets/img/zbd-dashboard.webp" alt="ZBD developer dashboard" loading=lazy decoding=async>
+    <img data-shot-index="1" src="assets/img/zbd-dashboard-home.png" alt="ZBD dashboard home showing recent projects and developer resources" loading=lazy decoding=async>
     <span class=card__org>ZBD</span>
   </div>
   <div class=card__body>
     <h3>Developer dashboard &amp; service endpoints</h3>
     <p class=card__meta>2024 – present</p>
-    <p class=card__text>The tool studios use to run their rewards, built in Next.js. A studio signs in, creates a project for its game, manages the wallet that funds the rewards, and customises how rewards look to players. I also add endpoints on the backend service the SDK talks to, so I can build what a studio needs directly rather than waiting on another team.</p>
+    <p class=card__text>The control panel studios use to create projects and run their rewards, built full-stack in Next.js with the backend endpoints behind it.</p>
+    <div class="card__more"><p>This is the control panel game studios use to run their rewards. They sign in, create a project for their game, manage the wallet that funds it, and control and check their players. I built it full-stack, both the website studios see and the backend behind it, so I can add a new feature across both at once instead of waiting on another team.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">TypeScript</li><li class="pill">Next.js</li><li class="pill">React</li></ul>
-    
+    <div class=card__links><a href="https://dashboard.zbdpay.com/login" target=_blank rel=noopener>Open dashboard &#8599;</a><a href="https://docs.zbdpay.com/bitcoin/start/dev-dashboard" target=_blank rel=noopener>Dashboard documentation &#8599;</a></div>
+
   </div>
-</article><article class=card data-facets="games sdk">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/cat-mountain.svg" alt="Illustration for Escape from Cat Mountain" loading=lazy decoding=async>
+</article><article class=card data-facets="sdk games">
+  <div data-slug="payouts-package" class="card__art card__art--ink"><img class=contain src="assets/img/embedded-payouts.png" alt="ZBD Embedded Payouts widget showing the available balance and cashout options" loading=lazy decoding=async>
+    <span class=card__org>ZBD</span>
+  </div>
+  <div class=card__body>
+    <h3>ZBD Embedded Payouts plugins for Unity, Unreal and Godot</h3>
+    <p class=card__meta>2026 – present</p>
+    <p class=card__text>I built Windows plugins and demo scenes that let developers drop ZBD’s Embedded Payouts widget into Unity, Unreal Engine, and Godot projects.</p>
+    <div class="card__more"><p>Each engine has a ready-to-use plugin and a demo scene developers can run to test the payout flow. A shared Windows attestation plugin provides the same device checks across all three engines, with Windows Hello verification when players add a bank account or request a withdrawal.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Unity</li><li class="pill">Unreal Engine</li><li class="pill">Godot</li><li class="pill">C#</li><li class="pill">Plugin / package</li><li class="pill">Device attestation</li><li class="pill">Windows Hello</li></ul>
+    <div class=card__links><a href="https://docs.zbdpay.com/embedded-payouts" target=_blank rel=noopener>Embedded Payouts documentation &#8599;</a></div>
+  </div>
+</article><article class=card data-facets="sdk web">
+  <div data-slug="cs2-widget" class="card__art card__art--ink"><img class=contain src="assets/img/cs2-widget-real.webp" alt="ZBD Payouts Widget on Counter-Strike 2 via Overwolf" loading=lazy decoding=async>
+    <span class=card__org>ZBD</span>
+  </div>
+  <div class=card__body>
+    <h3>ZBD Payouts Widget (Counter-Strike 2)</h3>
+    <p class=card__meta>2026 · Prototype</p>
+    <p class=card__text>I built an Overwolf prototype that turns live Counter-Strike 2 match events into rewards, with payouts signed using TPM 2.0 and confirmed through Windows Hello.</p>
+    <div class="card__more"><p>This is a prototype that pays Counter-Strike 2 players real rewards based on how they play. It is built on Overwolf, the official tool that lets apps read live moments from big games like CS2 (kills, headshots, round wins) without touching the game itself or tripping anti-cheat. The widget sits on top of the game, turns those moments into rewards, and lets the player cash out right there.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Overwolf</li><li class="pill">Game Events API</li><li class="pill">Real-time events</li><li class="pill">C# / .NET</li><li class="pill">JavaScript</li></ul>
+  </div>
+</article><article class=card data-facets="games">
+  <div data-slug="cat-mountain" class="card__art"><img class=fill style="object-position:center 30%" src="assets/img/cat-mountain-1.webp" alt="Escape from Cat Mountain" loading=lazy decoding=async>
     <span class=card__org>ZBD</span>
   </div>
   <div class=card__body>
     <h3>Escape from Cat Mountain</h3>
     <p class=card__meta>2025</p>
-    <p class=card__text>The demo game ZBD shows studios and publishers to explain how the Earn SDK works inside a real game, covering rewards, cashout and attestation end to end.</p>
+    <p class=card__text>ZBD's demo game that shows studios the Earn SDK working inside a real game. I built the whole demo except the art.</p>
+    <div class="card__more"><p>This is ZBD's demo game, shown to studios so they can see the rewards kit working inside a real, playable game instead of a slideshow. I built the whole game except the artwork, including the full rewards flow: signing up, earning while you play, and cashing out. It is the clearest way to show a studio how simple it is to add rewards to their own game.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li></ul>
-    
+
   </div>
 </article><article class=card data-facets="games">
   <div data-slug="kart" class="card__art"><img src="assets/img/kart-1.png" alt="ZEBEDEE Kart" loading=lazy decoding=async>
@@ -402,21 +534,12 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   </div>
   <div class=card__body>
     <h3>ZEBEDEE Kart</h3>
-    <p class=card__meta>2024</p>
-    <p class=card__text>A downloadable Windows game (ZEBEDEE Kart.exe) I built from a prototype into a 3D multiplayer racer, with keyboard or controller support, an online host/join flow, AI opponents, and rewards paid over Bitcoin Lightning. I also prototyped Windows device attestation for it. ZBD showcased it at a conference.</p>
+    <p class=card__meta>2022 – 2023</p>
+    <p class=card__text>A Unity kart racer for Windows with Bitcoin Lightning rewards. I developed AI opponents, new tracks and online multiplayer using Photon.</p>
+    <div class="card__more"><p>I joined ZEBEDEE Kart during its early prototype stage and developed AI opponents for solo races, built new tracks and implemented online multiplayer using Photon. Built in Unity for Windows, the game rewards players through Bitcoin Lightning. ZBD showcased it at a Bitcoin conference.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Photon</li></ul>
-    
-  </div>
-</article><article class=card data-facets="web">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/overwolf.svg" alt="Illustration for PC rewards app on Overwolf" loading=lazy decoding=async>
-    <span class=card__org>ZBD</span>
-  </div>
-  <div class=card__body>
-    <h3>PC rewards app on Overwolf</h3>
-    <p class=card__meta>2023</p>
-    <p class=card__text>Counter-Strike and Valorant cannot have an SDK embedded in them. An Overwolf app gets around it: web technology running as an overlay on top of the running game.</p>
-    <ul class=pills><li class="pill">Overwolf</li><li class="pill">JavaScript</li></ul>
-    
+
   </div>
 </article><article class=card data-facets="games">
   <div data-slug="sarutobi" class="card__art"><img src="assets/img/sarutobi-1.jpg" alt="SARUTOBI" loading=lazy decoding=async>
@@ -425,7 +548,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>SARUTOBI: Make the Monkey Fly</h3>
     <p class=card__meta>2022 – 2023</p>
-    <p class=card__text>Bitcoin-earning arcade title. New levels designed and shipped end to end, plus achievements, in-app purchases and rewarded video.</p>
+    <p class=card__text>Bitcoin-earning arcade title. I shipped new levels, achievements, IAP and ads, login with ZBD and AnyBrain analytics.</p>
+    <div class="card__more"><p>SARUTOBI is a Bitcoin-earning arcade game and one of ZBD's earliest titles. I updated and expanded it: new levels, achievements, in-app purchases and ads, sign-in with ZBD, and analytics so the team could see how players were really playing.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li></ul>
     <div class=card__links><a href="https://apps.apple.com/us/app/sarutobi-make-the-monkey-fly/id1527644721" target=_blank rel=noopener>App Store &#8599;</a></div>
   </div>
@@ -436,53 +561,129 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Lightning Crash</h3>
     <p class=card__meta>2022 – 2023</p>
-    <p class=card__text>Match-style puzzle game in the vein of Candy Crush. New levels from design through release, achievements, in-app purchases and rewarded ads. Since delisted.</p>
+    <p class=card__text>Match-style puzzle game. New levels, achievements, IAP, ads, login with ZBD and AnyBrain analytics, the same scope as SARUTOBI.</p>
+    <div class="card__more"><p>Lightning Crash is a match-style puzzle game, similar to Candy Crush, and another of ZBD's early reward games. I worked on it the same way as SARUTOBI: new levels, achievements, in-app purchases, ads, sign-in with ZBD and analytics. It has since been taken down.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li></ul>
-    
+
   </div>
-</article><article class=card data-facets="xr games">
-  <div data-slug="dialysis" class="card__art"><img src="assets/img/dialysis-1.jpg" alt="Dialysis training simulator" loading=lazy decoding=async>
+</article><article class=card data-facets="xr ar">
+  <div class="card__art card__art--empty">
+    <svg width="100%" height="100%" viewBox="0 0 320 180" role="img" aria-label="Illustrated map with three factory locations">
+      <path d="M54 64 158 27 271 70 271 113 166 151 54 109Z" fill="#211a36" stroke="#59457e" stroke-width="2"/>
+      <path d="m54 64 112 44 105-38m-105 38v43m-68-71 105-37m-73 51 105-37" fill="none" stroke="#7459a1" stroke-width="2"/>
+      <g fill="#a78bfa" stroke="#eceaf6" stroke-width="2">
+        <circle cx="112" cy="65" r="7"/><circle cx="167" cy="82" r="7"/><circle cx="221" cy="65" r="7"/>
+      </g>
+    </svg>
     <span class=card__org>Underlit Studio</span>
   </div>
   <div class=card__body>
-    <h3>Dialysis training simulator</h3>
-    <p class=card__meta>2023 – 2024 · Hospital training programme</p>
-    <p class=card__text>A 3D serious game that trains and assesses medical students on dialysis procedures. Shipped first on Android and iOS, later extended with a VR version. A hospital uses it with its own students. Behind it sits an administration dashboard where instructors review performance, search records and export results.</p>
-    <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Firebase</li><li class="pill">Meta Quest</li></ul>
-    
+    <h3>AR and VR tour of the M’ghira 3 industrial zone</h3>
+    <p class=card__meta>2025</p>
+    <p class=card__text>At Underlit Studio, I built two apps for The Industrial Land Agency (AFI). Visitors can explore an animated 3D map of M’ghira 3 on their phone or step inside three factories on Meta Quest.</p>
+    <div class="card__more"><p>In the iOS and Android app, Vuforia tracks a flat surface so visitors can place the animated map on a table or floor. They tap points on the map to watch videos and learn what the factories produce.</p><p>On Meta Quest, visitors select one of three locations on the same map and teleport into the factory. Inside, they try a task based on the work done there, such as connecting cables or printing an aircraft part.</p><p>AFI uses the apps at fairs and conferences to show prospective investors which industries already operate in M’ghira 3 and what the zone can offer their businesses.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Unity</li><li class="pill">Vuforia</li><li class="pill">iOS</li><li class="pill">Android</li><li class="pill">Meta Quest</li></ul>
   </div>
-</article><article class=card data-facets="xr">
+</article>
+<article class=card data-facets="xr">
   <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/isie-vr.svg" alt="Illustration for ISIE VR voting simulator" loading=lazy decoding=async>
     <span class=card__org>Underlit Studio</span>
   </div>
   <div class=card__body>
     <h3>ISIE VR voting simulator</h3>
     <p class=card__meta>2024 · ISIE, Tunisia&#x27;s independent electoral authority</p>
-    <p class=card__text>A civic education app in VR for Tunisia&#x27;s electoral authority: one app with four scenes, each a different voting scenario, so citizens can practise before they vote for real. Shipped with documentation in French, English and Arabic.</p>
+    <p class=card__text>A VR civic-education app for Tunisia's electoral authority, four voting scenarios citizens can practise before voting for real.</p>
+    <div class="card__more"><p>A VR app built for Tunisia's national electoral authority to teach people how to vote. It is one app with four different voting scenarios, so citizens can practise the whole process before election day. I delivered it with guides in French, English and Arabic so the authority could run it on their own.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Meta Quest 3</li></ul>
     
   </div>
-</article><article class=card data-facets="xr">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/theatre-controller.svg" alt="Illustration for Theatre installation controller" loading=lazy decoding=async>
+</article>
+<article class=card data-facets="xr games">
+  <div data-slug="dialysis" class="card__art"><img src="assets/img/dialysis-1.jpg" alt="Dialysis training simulator" loading=lazy decoding=async>
+    <span class=card__org>Underlit Studio</span>
+  </div>
+  <div class=card__body>
+    <h3>Dialysis training simulator</h3>
+    <p class=card__meta>2023 – 2024 · Hospital training programme</p>
+    <p class=card__text>I built this mobile and VR simulator end to end. Charles Nicolle Hospital uses it to train and assess medical students on dialysis procedures.</p>
+    <div class="card__more"><p>I developed the simulator in Unity for Android and iOS, then extended it to Meta Quest VR. An instructor dashboard supports reviewing student results, searching assessment records and exporting results. Charles Nicolle Hospital uses the simulator to train and assess medical students on dialysis procedures.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Firebase</li><li class="pill">Meta Quest</li></ul>
+
+  </div>
+</article>
+<article class=card data-facets="xr">
+  <div data-slug="theatre" class="card__art"><img src="assets/img/theatre-1.webp" alt="Theatre installation controller app" loading=lazy decoding=async>
     <span class=card__org>Underlit Studio</span>
   </div>
   <div class=card__body>
     <h3>Theatre installation controller</h3>
     <p class=card__meta>2023</p>
-    <p class=card__text>A controller app that keeps several kinds of 360° video playing in sync across many headsets at once, driven live during performances.</p>
+    <p class=card__text>A controller app that keeps 360 video playing in sync across many headsets at once, driven live during performances.</p>
+    <div class="card__more"><p>A control app for a live theatre show that keeps 360 video playing perfectly in sync across many VR headsets at once. An operator runs it live during the performance, choosing clips and view modes while every headset stays on exactly the same moment.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Mirror</li><li class="pill">Firebase</li></ul>
     
   </div>
-</article><article class=card data-facets="web">
+</article>
+<article class=card data-facets="xr ar">
+  <div data-slug="mechanical-parking" class="card__art"><img class=contain src="assets/img/mechanical-parking-ar.png" alt="Four AR views showing the parking barrier open and closed and an exploded view of the parking equipment" loading=lazy decoding=async>
+    <span class=card__org>Underlit Studio</span>
+  </div>
+  <div class=card__body>
+    <h3>Mechanical parking system in AR and VR</h3>
+    <p class=card__meta>2022</p>
+    <p class=card__text>I built an AR product demo for a supplier of mechanical parking systems and adapted it for VR so visitors could see how a car is parked.</p>
+    <div class="card__more"><p>The AR app gives visitors a 3D view of the parking mechanism. The VR version places them inside a virtual parking facility, where they can watch the mechanism in motion and follow the parking sequence from start to finish.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">AR</li><li class="pill">VR</li><li class="pill">3D product demonstration</li></ul>
+  </div>
+</article>
+<article class=card data-facets="xr">
+  <div data-slug="childbirth-vr" class="card__art"><img class=contain src="assets/img/childbirth-vr-illustration.png" alt="Illustration of the childbirth VR training scene with French interface prompts" loading=lazy decoding=async>
+    <span class=card__org>Underlit Studio</span>
+  </div>
+  <div class=card__body>
+    <h3>VR training for childbirth and epidural placement</h3>
+    <p class=card__meta>2022</p>
+    <p class=card__text>I built two VR simulations at Underlit Studio for a university in France, giving students a way to practise assisting with childbirth and placing an epidural for pain relief during labour.</p>
+    <div class="card__more"><p>In the first simulation, students practise helping a patient through labour and delivery. In the second, they practise placing an epidural to relieve pain during labour. Both simulations let students practise in VR before working with patients.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">VR</li><li class="pill">Clinical simulation</li><li class="pill">Medical education</li></ul>
+  </div>
+</article>
+<article class=card data-facets="web">
   <div data-slug="virtual-fair" class="card__art"><img src="assets/img/virtual-fair-1.jpg" alt="Virtual Fair" loading=lazy decoding=async>
     <span class=card__org>Underlit Studio</span>
   </div>
   <div class=card__body>
     <h3>Virtual Fair</h3>
     <p class=card__meta>2021</p>
-    <p class=card__text>A virtual fair visitors attend from anywhere. They walk the floor in third person, talk over video, audio or text, and browse stands, with the halls, stands and events all driven from a back-office app.</p>
+    <p class=card__text>A virtual fair visitors attend from anywhere, walking the floor in third person and talking over video, audio or text.</p>
+    <div class="card__more"><p>An online trade fair that visitors join from anywhere, right in their browser. People walk the floor as a character, talk to each other by video, voice or text, and visit stands, while organisers set up the halls, stands and events from a back-office tool with no developer needed.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity WebGL</li><li class="pill">C#</li><li class="pill">Firebase</li><li class="pill">WebRTC</li></ul>
     
+  </div>
+</article>
+<article class=card data-facets="ar">
+  <div class="card__art card__art--empty">
+    <svg width="100%" height="100%" viewBox="0 0 320 180" role="img" aria-label="Illustrated pair of jeans">
+      <path d="M128 28h64l12 122h-31l-13-69-13 69h-31Z" fill="#3f507d" stroke="#a5b4fc" stroke-width="2"/>
+      <path d="M127 43h66m-33 0v38m-13-35c0 10-6 16-21 18m47-18c0 10 6 16 21 18" fill="none" stroke="#a5b4fc" stroke-width="2"/>
+    </svg>
+    <span class=card__org>Underlit Studio</span>
+  </div>
+  <div class=card__body>
+    <h3>Sartex AR clothing showcase</h3>
+    <p class=card__meta>2022</p>
+    <p class=card__text>I built an AR showcase at Underlit Studio to help textile manufacturer Sartex present its existing range of jeans and other garments to prospective clients and investors at events.</p>
+    <div class="card__more"><p>Visitors browse Sartex’s clothing range by dressing a virtual character in the garments the company makes. They can switch between styles, colours and fabrics to see the options Sartex offers in AR.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
+    <ul class=pills><li class="pill">AR</li><li class="pill">3D character</li><li class="pill">Garment customisation</li></ul>
   </div>
 </article><article class=card data-facets="games">
   <div data-slug="katara" class="card__art"><img src="assets/img/katara-1.jpg" alt="Katara Treasure Hunt" loading=lazy decoding=async>
@@ -491,7 +692,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Katara Treasure Hunt</h3>
     <p class=card__meta>2019 · Katara Cultural Village, Qatar</p>
-    <p class=card__text>A location-based quiz game played on foot around Katara Cultural Village. Twelve quizzes unlock as Estimote beacons detect the player reaching each destination. A companion admin app lets the client add, edit and remove quizzes and see the top fifty scores, live.</p>
+    <p class=card__text>A location-based quiz game played on foot around Katara Cultural Village, with twelve quizzes unlocked by beacons.</p>
+    <div class="card__more"><p>A walk-around quiz game played on foot through Katara Cultural Village in Qatar. Twelve quizzes unlock as small location sensors notice you reaching each spot, with a map guiding you between them. A companion app let the client add and edit quizzes and watch the top scores update live.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Estimote</li><li class="pill">Mapbox</li><li class="pill">Firebase</li></ul>
     
   </div>
@@ -502,7 +705,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Museum for All</h3>
     <p class=card__meta>2021 · Bardo, Sousse and Djerba museums</p>
-    <p class=card__text>An audio guide built primarily for blind visitors. Beacons installed through the museum detect where someone is standing and play the description of the artefact in front of them, with no interaction needed. Sighted visitors can switch to a map view. A second admin app lets museum staff place beacons and edit what each one says.</p>
+    <p class=card__text>An audio guide built primarily for blind visitors: beacons detect where someone stands and describe the artefact in front of them.</p>
+    <div class="card__more"><p>An audio guide made mainly for blind visitors at three Tunisian museums. Small sensors around the museum notice where a visitor is standing and automatically describe the piece in front of them, with no tapping needed, while sighted visitors can switch to a map. Staff use a second app to place the sensors and edit what each one says.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Android</li><li class="pill">Java</li><li class="pill">Firebase</li><li class="pill">Beacons</li></ul>
     
   </div>
@@ -513,7 +718,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Dürr Technik AR</h3>
     <p class=card__meta>2020 · Dürr Technik GmbH &amp; Co. KG, Germany</p>
-    <p class=card__text>An AR app a manufacturer&#x27;s sales team uses to show customers how an air compressor works: the machine opens into exploded views, animates under full user control, and rotates through 360°.</p>
+    <p class=card__text>An AR app a manufacturer's sales team uses to show customers how an air compressor works, in exploded, animated 3D.</p>
+    <div class="card__more"><p>An AR app a German manufacturer's sales team uses to show customers how their air compressor works. Pointing a tablet at a marker makes the machine appear, open into its parts, animate to show how it runs, and spin a full turn, so a salesperson can explain a complex product without carrying one around.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Vuforia</li></ul>
     
   </div>
@@ -524,7 +731,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Tunisia VR</h3>
     <p class=card__meta>2022 · AMVPPC, the Heritage Enhancement and Cultural Promotion Agency</p>
-    <p class=card__text>A VR experience covering three Tunisian heritage sites, built in Unreal Engine 4 with Blueprints for Oculus Quest 2, with teleport navigation, interaction with 3D objects and three languages.</p>
+    <p class=card__text>A VR experience covering three Tunisian heritage sites, built in Unreal Engine for Oculus Quest 2.</p>
+    <div class="card__more"><p>A VR experience of three Tunisian heritage sites, made for the national heritage agency. I built it in Unreal Engine for the Oculus Quest, with teleport movement, objects you can interact with, and three languages, so people can visit these places in a headset even if they cannot travel there.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unreal Engine 4</li><li class="pill">Blueprints</li><li class="pill">Oculus Quest 2</li></ul>
     <div class=card__links><a href="https://www.youtube.com/watch?v=NJ3KAdMtL40" target=_blank rel=noopener>Makthar trailer &#8599;</a><a href="https://www.youtube.com/watch?v=XIitf_rr3uk" target=_blank rel=noopener>Pilau trailer &#8599;</a></div>
   </div>
@@ -535,7 +744,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Magic Eye</h3>
     <p class=card__meta>2019 · Magic Eye Museum</p>
-    <p class=card__text>More than fifty 3D animations triggered by scanning markers around the museum. Works offline through asset bundles, and saves visitors&#x27; photos and videos straight to their gallery.</p>
+    <p class=card__text>More than fifty 3D animations triggered by scanning markers around the museum, working fully offline.</p>
+    <div class="card__more"><p>An AR museum experience with more than fifty 3D animations that appear when you scan markers around the exhibits. It works completely offline so it keeps running whatever the connection, and it saves visitors' photos and videos straight to their phone.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Vuforia</li><li class="pill">Asset Bundles</li></ul>
     
   </div>
@@ -546,7 +757,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Magic Earth</h3>
     <p class=card__meta>2019 · Magic Eye Museum</p>
-    <p class=card__text>An AR quiz game for the museum floor: twenty quizzes, each launched by scanning the right marker among the exhibits.</p>
+    <p class=card__text>An AR quiz game for the museum floor: twenty quizzes, each launched by scanning the right marker.</p>
+    <div class="card__more"><p>An AR quiz game for the museum floor: twenty quizzes spread through the exhibits, each one starting when you scan the right marker, turning a normal visit into a game that rewards paying attention to the real objects.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Vuforia</li></ul>
     
   </div>
@@ -557,7 +770,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Opalia Recordati AR</h3>
     <p class=card__meta>2020 · Opalia Recordati Group</p>
-    <p class=card__text>An AR app medical delegates use in front of doctors and pharmacists: scan a product box and its category, usage and full leaflet come up, with 3D animation and an in-app PDF renderer.</p>
+    <p class=card__text>An AR app medical delegates use in front of doctors: scan a product box and its details come up in animated 3D.</p>
+    <div class="card__more"><p>An AR app for a pharmaceutical company's reps to use in front of doctors and pharmacists. Scanning a product box brings up its details, uses and full leaflet, with 3D animation and a built-in document viewer, so the whole product story comes from a single scan instead of paper.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Vuforia</li></ul>
     
   </div>
@@ -568,7 +783,9 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Ribat Adventure</h3>
     <p class=card__meta>2021 · Ribat of Sousse (historical site)</p>
-    <p class=card__text>An AR game set in the Ribat of Sousse that revives how a Murabit was taught and trained during the reign of Asad ibn al-Furat, with a quiz generated fresh each time.</p>
+    <p class=card__text>An AR game set in the Ribat of Sousse that revives how a Murabit was trained, with a fresh quiz each time.</p>
+    <div class="card__more"><p>An AR history game set in the Ribat of Sousse that brings to life how its soldiers were trained there centuries ago, with a quiz that is different every time so it stays fresh on repeat visits.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Vuforia</li></ul>
     
   </div>
@@ -579,18 +796,22 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Sfax Tour</h3>
     <p class=card__meta>2022 · City of Sfax</p>
-    <p class=card__text>An AR treasure hunt through the medina of Sfax: more than twenty quizzes, with a navigation map guiding players to the next destination.</p>
+    <p class=card__text>An AR treasure hunt through the medina of Sfax, more than twenty quizzes with a map guiding you to each stop.</p>
+    <div class="card__more"><p>An AR treasure hunt through the old town of Sfax, made for the city. More than twenty quizzes are placed around the medina, with a map guiding players from one spot to the next, turning a walk through the city into a discovery game.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Vuforia</li></ul>
     
   </div>
 </article><article class=card data-facets="ar">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/medina.svg" alt="Illustration for Medina Discovery" loading=lazy decoding=async>
+  <div data-slug="medina" class="card__art card__art--ink"><img class=contain src="assets/img/medina-1.webp" alt="Medina Discovery heritage map and guide" loading=lazy decoding=async>
     <span class=card__org>3D WAVE</span>
   </div>
   <div class=card__body>
     <h3>Medina Discovery</h3>
     <p class=card__meta>2020 · Medina Yasmine Hammamet</p>
-    <p class=card__text>A 3D map of the Medina of Yasmine Hammamet with more than twenty points of interest, each opening details, a 360° tour, or video inside the app.</p>
+    <p class=card__text>A 3D map of the Medina of Yasmine Hammamet with more than twenty points of interest to explore.</p>
+    <div class="card__more"><p>A 3D interactive map of the Medina of Yasmine Hammamet with more than twenty points of interest. Each one opens its own details, a 360 tour or a video, so visitors can explore the area and plan what to see before they arrive.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity</li><li class="pill">C#</li><li class="pill">Flutter</li></ul>
     
   </div>
@@ -601,13 +822,13 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=card__body>
     <h3>Save the Princesses</h3>
     <p class=card__meta>2019 · End-of-studies project</p>
-    <p class=card__text>A WebGL serious game that assesses which academic pathway suits a student. Players write simple code instructions to move a character through three levels.</p>
+    <p class=card__text>A WebGL serious game that assesses which academic pathway suits a student through simple coding puzzles.</p>
+    <div class="card__more"><p>My final university project: a browser game that helps work out which study path suits a student. Players write simple step-by-step instructions to move a character through three levels, and how they solve the puzzles feeds into the result, measuring ability through play instead of a quiz.</p></div>
+    <button class="card__toggle" type="button" aria-expanded="false">See more</button>
     <ul class=pills><li class="pill">Unity WebGL</li><li class="pill">C#</li></ul>
     
   </div>
 </article></div>
-    <p class=grid__note>Illustrated covers mark work that cannot be shown as screenshots:
-      client software and unreleased internals.</p>
   </div>
 </section>
 
@@ -615,8 +836,8 @@ section.band{padding:92px 0;scroll-margin-top:90px}
   <div class=wrap>
     <header class=shead><span class=ico><svg viewBox="0 0 24 24" aria-hidden=true><path d="M3 6h18v12H3Zm0 0 9 7 9-7"/></svg></span><div><p class=shead__eye>Contact</p><h2>Let us talk</h2></div></header>
     <div class=contact__card>
-      <h3>Building an SDK, or wiring Unity into native code?</h3>
-      <p>That is the work I do, including making a game trust the device it is running on.</p>
+      <h3>Hiring a Unity developer?</h3>
+      <p>I’m open to roles in cross-platform game development, XR and game SDK engineering.</p>
       <div class=cta>
         <a class="btn btn--fill" href="mailto:garasouleima01@gmail.com">garasouleima01@gmail.com</a>
         <a class=btn href="https://www.linkedin.com/in/souleima-gara-bb688212b/" target=_blank rel=noopener>LinkedIn</a>
@@ -643,7 +864,7 @@ section.band{padding:92px 0;scroll-margin-top:90px}
 </div>
 
 <script>
-const cards = [...document.querySelectorAll('.card')];
+const cards = [...document.querySelectorAll('#work .card')];
 document.querySelectorAll('.filters button').forEach(btn => {
   btn.onclick = () => {
     const f = btn.dataset.facet;
@@ -653,7 +874,7 @@ document.querySelectorAll('.filters button').forEach(btn => {
   };
 });
 
-const SHOTS = {"dialysis": ["dialysis-1.jpg"], "virtual-fair": ["virtual-fair-1.jpg"], "katara": ["katara-1.jpg", "katara-2.jpg"], "museum-for-all": ["museum-1.jpg", "museum-2.jpg", "museum-3.jpg"], "durr": ["durr-1.jpg"], "tunisia-vr": ["tunisia-vr-1.jpg", "tunisia-vr-2.jpg"], "magic-eye": ["magic-eye-1.jpg"], "magic-earth": ["magic-earth-1.jpg"], "opalia": ["opalia-1.jpg", "opalia-2.jpg"], "ribat": ["ribat-1.jpg", "ribat-2.jpg"], "sfax-tour": ["sfax-1.jpg"], "save-princesses": ["save-princesses-1.jpg"], "kart": ["kart-1.png"], "sarutobi": ["sarutobi-1.jpg"], "lightning-crash": ["lightning-crash-1.webp"]};
+const SHOTS = {"childbirth-vr": ["childbirth-vr-illustration.png"], "mechanical-parking": ["mechanical-parking-ar.png"], "attestation": ["attestation-real.webp"], "cashouts": ["cashouts-real.webp"], "cs2-widget": ["cs2-widget-real.webp"], "medina": ["medina-1.webp"], "theatre": ["theatre-1.webp"], "cat-mountain": ["cat-mountain-1.webp"], "zbd-earn-sdk": ["zbd-earn-sdk.webp"], "zbd-dashboard": ["zbd-dashboard.webp", "zbd-dashboard-home.png"], "zbd-webview": ["zbd-widget.png"], "dialysis": ["dialysis-1.jpg"], "virtual-fair": ["virtual-fair-1.jpg"], "katara": ["katara-1.jpg", "katara-2.jpg"], "museum-for-all": ["museum-1.jpg", "museum-2.jpg", "museum-3.jpg"], "durr": ["durr-1.jpg"], "tunisia-vr": ["tunisia-vr-1.jpg", "tunisia-vr-2.jpg"], "magic-eye": ["magic-eye-1.jpg"], "magic-earth": ["magic-earth-1.jpg"], "opalia": ["opalia-1.jpg", "opalia-2.jpg"], "ribat": ["ribat-1.jpg", "ribat-2.jpg"], "sfax-tour": ["sfax-1.jpg"], "save-princesses": ["save-princesses-1.jpg"], "kart": ["kart-1.png"], "sarutobi": ["sarutobi-1.jpg"], "lightning-crash": ["lightning-crash-1.webp"], "rewards-web-app": ["rewards-web-app.jpeg"], "payouts-package": ["embedded-payouts.png", "zbd-widget.png"]};
 const lb = document.querySelector('.lb');
 const img = lb.querySelector('img');
 const num = lb.querySelector('.lb__count');
@@ -673,7 +894,7 @@ document.addEventListener('click', ev => {
   if (!set.length) return;
   lb.setAttribute('open', '');
   document.body.style.overflow = 'hidden';
-  show(0);
+  show(Number(ev.target.dataset.shotIndex || 0));
 });
 lb.querySelector('.lb__close').onclick = close;
 lb.querySelector('.lb__prev').onclick = () => show(at - 1);
@@ -685,6 +906,48 @@ document.addEventListener('keydown', ev => {
   if (ev.key === 'ArrowLeft') show(at - 1);
   if (ev.key === 'ArrowRight') show(at + 1);
 });
+</script>
+
+<div class="modal" id="projModal" aria-hidden="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" data-close aria-label="Close">&times;</button>
+    <div class="modal__media" id="modalMedia"><img id="modalImg" alt="" loading="lazy"></div>
+    <div class="modal__in">
+      <h3 id="modalTitle"></h3>
+      <p class="modal__meta" id="modalMeta"></p>
+      <div class="modal__body" id="modalBody"></div>
+      <div id="modalPills"></div>
+      <div id="modalLinks"></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var modal=document.getElementById('projModal'),box=modal.querySelector('.modal__box');
+  var mImg=document.getElementById('modalImg'),mMedia=document.getElementById('modalMedia');
+  var mT=document.getElementById('modalTitle'),mM=document.getElementById('modalMeta'),mB=document.getElementById('modalBody');
+  var mPills=document.getElementById('modalPills'),mLinks=document.getElementById('modalLinks');
+  function openM(card){
+    var img=card.querySelector('.card__art img'),h=card.querySelector('h3'),meta=card.querySelector('.card__meta');
+    var more=card.querySelector('.card__more'),pills=card.querySelector('.pills'),links=card.querySelector('.card__links');
+    if(img){mImg.src=img.currentSrc||img.src;mImg.alt=img.alt||'';mImg.style.objectFit=img.classList.contains('contain')?'contain':'cover';mMedia.style.display='block';}
+    else{mMedia.style.display='none';}
+    mMedia.classList.toggle('modal__media--portrait', Boolean(card.querySelector('.card__art--portrait')));
+    mT.textContent=h?h.textContent:'';
+    mM.textContent=meta?meta.textContent:'';mM.style.display=meta?'block':'none';
+    mB.innerHTML=more?more.innerHTML:'';
+    mPills.innerHTML=pills?pills.outerHTML:'';
+    mLinks.innerHTML=links?links.outerHTML:'';
+    modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';box.scrollTop=0;
+  }
+  function closeM(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  document.querySelectorAll('.card__toggle').forEach(function(b){
+    b.addEventListener('click',function(){openM(b.closest('.card'));});
+  });
+  modal.addEventListener('click',function(e){ if(e.target.hasAttribute('data-close')) closeM(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeM(); });
+})();
 </script>
 </body>
 </html>
