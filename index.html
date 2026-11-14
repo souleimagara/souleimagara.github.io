@@ -568,14 +568,7 @@ section.band{padding:52px 0;scroll-margin-top:84px}
 
   </div>
 </article><article class=card data-facets="xr ar">
-  <div class="card__art card__art--empty">
-    <svg width="100%" height="100%" viewBox="0 0 320 180" role="img" aria-label="Illustrated map with three factory locations">
-      <path d="M54 64 158 27 271 70 271 113 166 151 54 109Z" fill="#211a36" stroke="#59457e" stroke-width="2"/>
-      <path d="m54 64 112 44 105-38m-105 38v43m-68-71 105-37m-73 51 105-37" fill="none" stroke="#7459a1" stroke-width="2"/>
-      <g fill="#a78bfa" stroke="#eceaf6" stroke-width="2">
-        <circle cx="112" cy="65" r="7"/><circle cx="167" cy="82" r="7"/><circle cx="221" cy="65" r="7"/>
-      </g>
-    </svg>
+  <div data-slug="mghira-3" class="card__art"><img class=contain src="assets/img/mghira-map.png" alt="Interactive 3D map of the M’ghira 3 industrial zone" loading=lazy decoding=async>
     <span class=card__org>Underlit Studio</span>
   </div>
   <div class=card__body>
@@ -588,7 +581,7 @@ section.band{padding:52px 0;scroll-margin-top:84px}
   </div>
 </article>
 <article class=card data-facets="xr">
-  <div class="card__art card__art--empty"><img class=card__cover src="assets/img/covers/isie-vr.svg" alt="Illustration for ISIE VR voting simulator" loading=lazy decoding=async>
+  <div data-slug="isie-vr" class="card__art"><img class=contain src="assets/img/isie-vr-welcome.png" alt="Welcome screen of the ISIE VR voting simulator with four experience options" loading=lazy decoding=async>
     <span class=card__org>Underlit Studio</span>
   </div>
   <div class=card__body>
@@ -670,11 +663,7 @@ section.band{padding:52px 0;scroll-margin-top:84px}
   </div>
 </article>
 <article class=card data-facets="ar">
-  <div class="card__art card__art--empty">
-    <svg width="100%" height="100%" viewBox="0 0 320 180" role="img" aria-label="Illustrated pair of jeans">
-      <path d="M128 28h64l12 122h-31l-13-69-13 69h-31Z" fill="#3f507d" stroke="#a5b4fc" stroke-width="2"/>
-      <path d="M127 43h66m-33 0v38m-13-35c0 10-6 16-21 18m47-18c0 10 6 16 21 18" fill="none" stroke="#a5b4fc" stroke-width="2"/>
-    </svg>
+  <div data-slug="sartex" class="card__art"><img class=contain src="assets/img/sartex-ar.png" alt="Three views of the Sartex AR app: clothing menu, virtual character and fabric preview" loading=lazy decoding=async>
     <span class=card__org>Underlit Studio</span>
   </div>
   <div class=card__body>
@@ -874,7 +863,7 @@ document.querySelectorAll('.filters button').forEach(btn => {
   };
 });
 
-const SHOTS = {"childbirth-vr": ["childbirth-vr-illustration.png"], "mechanical-parking": ["mechanical-parking-ar.png"], "attestation": ["attestation-real.webp"], "cashouts": ["cashouts-real.webp"], "cs2-widget": ["cs2-widget-real.webp"], "medina": ["medina-1.webp"], "theatre": ["theatre-1.webp"], "cat-mountain": ["cat-mountain-1.webp"], "zbd-earn-sdk": ["zbd-earn-sdk.webp"], "zbd-dashboard": ["zbd-dashboard.webp", "zbd-dashboard-home.png"], "zbd-webview": ["zbd-widget.png"], "dialysis": ["dialysis-1.jpg"], "virtual-fair": ["virtual-fair-1.jpg"], "katara": ["katara-1.jpg", "katara-2.jpg"], "museum-for-all": ["museum-1.jpg", "museum-2.jpg", "museum-3.jpg"], "durr": ["durr-1.jpg"], "tunisia-vr": ["tunisia-vr-1.jpg", "tunisia-vr-2.jpg"], "magic-eye": ["magic-eye-1.jpg"], "magic-earth": ["magic-earth-1.jpg"], "opalia": ["opalia-1.jpg", "opalia-2.jpg"], "ribat": ["ribat-1.jpg", "ribat-2.jpg"], "sfax-tour": ["sfax-1.jpg"], "save-princesses": ["save-princesses-1.jpg"], "kart": ["kart-1.png"], "sarutobi": ["sarutobi-1.jpg"], "lightning-crash": ["lightning-crash-1.webp"], "rewards-web-app": ["rewards-web-app.jpeg"], "payouts-package": ["embedded-payouts.png", "zbd-widget.png"]};
+const SHOTS = {"mghira-3": ["mghira-map.png", "mghira-hangar.png", "mghira-assembly.png", "mghira-language.png"], "sartex": ["sartex-ar.png"], "childbirth-vr": ["childbirth-vr-illustration.png"], "mechanical-parking": ["mechanical-parking-ar.png"], "attestation": ["attestation-real.webp"], "cashouts": ["cashouts-real.webp"], "cs2-widget": ["cs2-widget-real.webp"], "medina": ["medina-1.webp"], "theatre": ["theatre-1.webp"], "cat-mountain": ["cat-mountain-1.webp"], "zbd-earn-sdk": ["zbd-earn-sdk.webp"], "zbd-dashboard": ["zbd-dashboard.webp", "zbd-dashboard-home.png"], "zbd-webview": ["zbd-widget.png"], "dialysis": ["dialysis-1.jpg"], "virtual-fair": ["virtual-fair-1.jpg"], "katara": ["katara-1.jpg", "katara-2.jpg"], "museum-for-all": ["museum-1.jpg", "museum-2.jpg", "museum-3.jpg"], "durr": ["durr-1.jpg"], "tunisia-vr": ["tunisia-vr-1.jpg", "tunisia-vr-2.jpg"], "magic-eye": ["magic-eye-1.jpg"], "magic-earth": ["magic-earth-1.jpg"], "opalia": ["opalia-1.jpg", "opalia-2.jpg"], "ribat": ["ribat-1.jpg", "ribat-2.jpg"], "sfax-tour": ["sfax-1.jpg"], "save-princesses": ["save-princesses-1.jpg"], "kart": ["kart-1.png"], "sarutobi": ["sarutobi-1.jpg"], "lightning-crash": ["lightning-crash-1.webp"], "rewards-web-app": ["rewards-web-app.jpeg"], "payouts-package": ["embedded-payouts.png", "zbd-widget.png"], "isie-vr": ["isie-vr-welcome.png", "isie-vr-exhibit.png", "isie-vr-title.png"]};
 const lb = document.querySelector('.lb');
 const img = lb.querySelector('img');
 const num = lb.querySelector('.lb__count');
